@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Reading time",
+    "version": "1.0",
+    "permissions":
+    [
+        "storage"
+    ],
+    "description": "Make the property display width increased when viewing Notion pages.",
+    "content_scripts":
+    [
+        {
+            "js":
+            [
+                "scripts/content.js"
+            ],
+            "matches":
+            [
+                "https://www.notion.so/*"
+            ]
+        }
+    ],
+    "action":
+    {
+        "default_popup": "scripts/popup/popup.html"
+    }
+}
